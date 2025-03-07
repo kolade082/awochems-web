@@ -7,10 +7,11 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>About AWO Chemicals</h3>
+          <h3>About AWOCHEM</h3>
           <p>
-            AWO Chemicals is a leading provider of high-quality chemical solutions,
-            serving industries worldwide with innovative products and exceptional service.
+            AWOCHEM is serving industries  with innovative products and exceptional service.
+            We specialize in manufacturing and supplying premium nylon materials
+            for various industrial applications.
           </p>
         </div>
 
@@ -18,7 +19,6 @@ function Footer() {
           <h3>Quick Links</h3>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/products">Our Products</Link></li>
             <li><Link to="/sectors">Our Sectors</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
@@ -28,7 +28,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Our Products</h3>
           <ul>
-            <li><Link to="/product/category1">Specialist Bag</Link></li>
+            <li><Link to="/product/category1">Specialist Bags</Link></li>
             <li><Link to="/product/category2">Tray & Dolav Liners</Link></li>
             <li><Link to="/product/category3">Sheet & Tubing</Link></li>
             <li><Link to="/product/category4">Specialist Sacks</Link></li>
@@ -40,11 +40,11 @@ function Footer() {
           <ul className="contact-info">
             <li>
               <FaPhone className="contact-icon" />
-              <span>+1 234 567 890</span>
+              <span>+234 805 452 8088</span>
             </li>
             <li>
               <FaEnvelope className="contact-icon" />
-              <span>info@awochemicals.com</span>
+              <span>zac_y56@yahoo.com</span>
             </li>
             <li>
               <FaMapMarkerAlt className="contact-icon" />

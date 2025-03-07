@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
   }
 
   .home-page {
@@ -72,6 +72,7 @@
     font-size: 3.5rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 700;
   }
 
   .hero-content p {
@@ -189,35 +190,28 @@
     line-height: 1.6;
   }
 
-.explore-products-section {
-    padding: 5rem 2rem;
-  }
-  
-  .section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .section-header h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .section-header p {
-    color: #666;
-    font-size: 1.2rem;
+
+  .explore-products-section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
   }
   
   .products-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
   }
   
   .product-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: flex-end;
+    max-width: calc(50% - 10px);
+    gap: 20px;
   }
 .product-card-link {
   text-decoration: none;
@@ -231,87 +225,77 @@
 
 .product-card {
     /*width: calc(50% - 10px);*/
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background-color: #0275d8;
+    color: white;
+    padding: 20px;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
 }
   .product-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
   }
-  .product-image {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-  }
-  .product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  .product-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .product-card:hover .product-overlay {
-    opacity: 1;
-  }
-  .product-overlay span {
-    color: #fff;
+  .product-card img {
+  width: 220px;
+  height: 210px; 
+  justify-content: center;
+  margin-bottom: 1rem; 
+}
+  .product-card h3 {
+    margin: 10px 0;
     font-weight: bold;
-    text-transform: uppercase;
   }
-  .product-content {
-    padding: 1.5rem;
-    text-align: center;
+  
+  .product-card p {
+    font-size: 0.9rem;
+    font-weight: 800;
   }
-  .product-content h3 {
-    font-size: 1.5rem;
+  
+  .products-description {
+    flex: 1;
+    padding-left: 20px; 
+  }
+  
+  .products-description h2 {
     color: #333;
-    margin-bottom: 0.5rem;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bolder;
   }
   
-  .product-content p {
+  .products-description p {
     color: #666;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 900;
   }
   
-  .products-cta {
-    text-align: center;
-    margin-top: 3rem;
-  }
-  
-  .btn-core-products {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+  .btn-core-products,
+  .btn-download-stocklist {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 45px;
+    margin-bottom: 10px;
+    cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
-    transition: all 0.3s ease;
   }
   
-  .btn-core-products:hover {
-    background-color: #000;
-    transform: translateY(-2px);
+  .btn-core-products:hover,
+  .btn-download-stocklist:hover {
+    background-color: #333;
   }
   .card-specialist-bags { background-color: #3c4d7b; } 
   .card-tray-liners { background-color: #4b7e93; } 
   .card-sheets-tubing { background-color: #4b7e93; } 
   .card-specialist-sacks { background-color: #3c4d7b; } 
+
 
 /* Packaging solution CTA section */
 .packaging-solution-cta {
@@ -533,20 +517,21 @@
       grid-template-columns: 1fr;
     }
     .products-layout {
-        flex-direction: column;
-      }
-    
-      .product-cards {
-        grid-template-columns: 1fr;
-      }
-    
-      .product-card {
-        width: 100%;
-      }
-    
-      .products-description {
-        padding-left: 0;
-      }
+      flex-direction: column;
+    }
+  
+    .product-cards {
+      max-width: 100%;
+      justify-content: center;
+    }
+  
+    .product-card {
+      width: 100%;
+    }
+  
+    .products-description {
+      padding-left: 0;
+    }
   
     .benefit {
       flex-basis: auto;

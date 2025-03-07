@@ -55,10 +55,10 @@ function HomePage() {
           <div className="hero-container">
             {slides[currentSlide]}
             <div className="hero-content">
-              <h1>Welcome to AWO Chemicals</h1>
-              <p>Your Trusted Partner in Quality Chemical Solutions</p>
+              <h1>Welcome to AWOCHEM</h1>
+              {/* <p>Your Trusted Partner in Quality Chemical Solutions</p> */}
               <div className="hero-buttons">
-                <Link to="/products" className="primary-btn">Explore Products</Link>
+                <Link to="/sectors" className="primary-btn">Explore Sectors</Link>
                 <Link to="/contact" className="secondary-btn">Contact Us</Link>
               </div>
             </div>
@@ -131,78 +131,50 @@ function HomePage() {
           </div>
         </section>
 
-        {/* Explore Our Products Section */}
-        <section className="explore-products-section">
-          <div className="section-header">
-            <h2>Explore Our Product Range</h2>
-            <p>Discover our comprehensive range of high-quality chemical solutions</p>
-          </div>
+       {/* Explore Our Products Section */}
+       <section className="explore-products-section">
           <div className="products-layout">
             <div className="product-cards">
               {/* Product Card for Specialist Bags */}
               <Link to="/product/category1" className="product-card-link">
-                <div className="product-card card-specialist-bags">
-                  <div className="product-image">
-                    <img src={bag} alt="Specialist Bags"/>
-                    <div className="product-overlay">
-                      <span>Learn More</span>
-                    </div>
-                  </div>
-                  <div className="product-content">
-                    <h3>Specialist Bags</h3>
-                    <p>All-purpose, accredited, flexible</p>
-                  </div>
-                </div>
+              <div className="product-card card-specialist-bags">
+                <img src={bag} alt="bag"/>
+                <h3>Specialist Bags</h3>
+                <p>All-purpose, accredited, flexible</p>
+              </div>
               </Link>
               {/* Product Card for Tray & Dolav Liners */}
               <Link to="/product/category2" className="product-card-link">
-                <div className="product-card card-tray-liners">
-                  <div className="product-image">
-                    <img src={tray} alt="Tray & Dolav Liners"/>
-                    <div className="product-overlay">
-                      <span>Learn More</span>
-                    </div>
-                  </div>
-                  <div className="product-content">
-                    <h3>Tray & Dolav Liners</h3>
-                    <p>Safe, compliant, hygienic</p>
-                  </div>
-                </div>
+              <div className="product-card card-tray-liners">
+                <img src={tray} alt="bag"/>
+                <h3>Tray & Dolav Liners</h3>
+                <p>Safe, compliant, hygienic</p>
+              </div>
               </Link>
               <Link to="/product/category3" className="product-card-link">
-                <div className="product-card card-sheets-tubing">
-                  <div className="product-image">
-                    <img src={sheets} alt="Sheets & Tubing"/>
-                    <div className="product-overlay">
-                      <span>Learn More</span>
-                    </div>
-                  </div>
-                  <div className="product-content">
-                    <h3>Sheets & Tubing</h3>
-                    <p>Tough, customisable, protective</p>
-                  </div>
-                </div>
+              <div className="product-card card-sheets-tubing">
+                <img src={sheets} alt="bag"/>
+                <h3>Sheets & Tubing</h3>
+                <p>Tough, customisable, protective</p>
+              </div>
               </Link>
               <Link to="/product/category4" className="product-card-link">
-                <div className="product-card card-specialist-sacks">
-                  <div className="product-image">
-                    <img src={sacks} alt="Specialist Sacks"/>
-                    <div className="product-overlay">
-                      <span>Learn More</span>
-                    </div>
-                  </div>
-                  <div className="product-content">
-                    <h3>Specialist Sacks</h3>
-                    <p>Adaptable, purpose-built, strong</p>
-                  </div>
-                </div>
+              <div className="product-card card-specialist-sacks">
+                <img src={sacks} alt="bag"/>
+                <h3>Specialist Sacks</h3>
+                <p>Adaptable, purpose-built, strong</p>
+              </div>
               </Link>
             </div>
-          </div>
-          <div className="products-cta">
-            <Link to="/products" className="btn-core-products">VIEW ALL PRODUCTS</Link>
+
+            <div className="products-description">
+              <h2>Explore Our Product Range</h2>
+              {/* <p>Our entire range is produced at our Lagos locations...</p>
+              <button className="btn-core-products">OUR CORE PRODUCTS</button> */}
+            </div>
           </div>
         </section>
+
 
 
         <section className="why-choose-section">
