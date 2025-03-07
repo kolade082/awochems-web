@@ -2,81 +2,71 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import Logo from "../../assets/logos/awo-logo-white.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "../../assets/styles/NavbarStyles.css";
 
 function Navbar() {
-  const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleProducts = () => setIsProductsOpen(!isProductsOpen);
 
   return (
-    <nav className="relative flex w-full navbar-dark-grey py-2 shadow-md shadow-black/5">
-      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
-      <div className="w-full flex items-center justify-between">
-        <Link to="/" className="flex items-center">
-          <img
-            src={Logo}
-            style={{ height: "30px" }}
-            alt="awochem Logo"
-            loading="lazy"
-          />
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          <img src={Logo} alt="AWO Logo" />
         </Link>
-        {/* Hamburger Menu Icon */}
-        <button
-          onClick={() => setIsNavExpanded(!isNavExpanded)}
-          className="hamburger lg:hidden"
-        >
-          <FaBars size={20} />
-        </button>
+
+        <div className="menu-icon" onClick={toggleMenu}>
+          <FaBars />
         </div>
 
-        <ul
-          className={`
-          absolute lg:static
-          top-full left-0 w-full
-          flex flex-col lg:flex-row 
-          items-center justify-center
-          bg-black lg:bg-transparent
-          space-y-4 lg:space-y-0 lg:space-x-6
-          ${isNavExpanded ? "block" : "hidden"} 
-          lg:flex
-          lg:absolute lg:left-1/2 
-          lg:transform lg:-translate-x-1/2
-        `}
-        >
-          <li>
-            <Link
-              to="/"
-              className="text-white hover:text-neutral-300 transition-colors"
-            >
+        <ul className={isOpen ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <Link to="/" className="nav-link">
               HOME
             </Link>
           </li>
-          <li>
-            <Link to="/" className="text-neutral-500 hover:text-neutral-700">
+
+          <li className="nav-item">
+            <div className="nav-link products-link" onClick={toggleProducts}>
               OUR PRODUCTS
-            </Link>
+              <FontAwesomeIcon icon={faChevronDown} className="dropdown-icon" />
+            </div>
+            <ul className={isProductsOpen ? "submenu active" : "submenu"}>
+              <li>
+                <Link to="/product/category1">Specialist Bag</Link>
+              </li>
+              <li>
+                <Link to="/product/category2">Tray & Dolav Liners</Link>
+              </li>
+              <li>
+                <Link to="/product/category3">Sheet & Tubing</Link>
+              </li>
+              <li>
+                <Link to="/product/category4">Specialist Sacks</Link>
+              </li>
+            </ul>
           </li>
-          <li>
-            <Link
-              to="/sector"
-              className="text-neutral-500 hover:text-neutral-700"
-            >
+
+          <li className="nav-item">
+            <Link to="/sectors" className="nav-link">
               OUR SECTORS
             </Link>
           </li>
-          <li>
-            <Link
-              to="/contact"
-              className="text-neutral-500 hover:text-neutral-700"
-            >
-              CONTACT US
+
+          <li className="nav-item">
+            <Link to="/about" className="nav-link">
+              ABOUT US
             </Link>
           </li>
-          <li>
-            <Link
-              to="/about"
-              className="text-neutral-500 hover:text-neutral-700"
-            >
-              ABOUT
+
+          <li className="nav-item">
+            <Link to="/contact" className="nav-link">
+              CONTACT US
             </Link>
           </li>
         </ul>
