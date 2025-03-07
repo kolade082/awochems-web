@@ -54,13 +54,21 @@ function HomePage() {
         <section className="hero">
           <div className="hero-container">
             {slides[currentSlide]}
+            <div className="hero-content">
+              <h1>Welcome to AWO Chemicals</h1>
+              <p>Your Trusted Partner in Quality Chemical Solutions</p>
+              <div className="hero-buttons">
+                <Link to="/products" className="primary-btn">Explore Products</Link>
+                <Link to="/contact" className="secondary-btn">Contact Us</Link>
+              </div>
+            </div>
             <div className="dots">
               {slides.map((_, index) => (
-                  <span
-                      key={index}
-                      className={`dot ${index === currentSlide ? "active" : ""}`}
-                      onClick={() => setCurrentSlide(index)}
-                  ></span>
+                <span
+                  key={index}
+                  className={`dot ${index === currentSlide ? "active" : ""}`}
+                  onClick={() => setCurrentSlide(index)}
+                ></span>
               ))}
             </div>
           </div>
@@ -70,110 +78,132 @@ function HomePage() {
           <button className="slide-btn next" onClick={nextSlide}>
             <FontAwesomeIcon icon={faChevronRight}/>
           </button>
-
-
         </section>
 
         {/* Why Awochem? Section */}
-        {/*<section className="why-awochem">*/}
-        {/*  <h2>WHY AWOCHEM?</h2>*/}
-        {/*  <div className="benefits">*/}
-        {/*    <div className="benefit">*/}
-        {/*      <svg*/}
-        {/*          className="benefit-icon quality-icon"*/}
-        {/*          xmlns="http://www.w3.org/2000/svg"*/}
-        {/*          viewBox="0 0 24 24"*/}
-        {/*          fill="none"*/}
-        {/*          stroke="currentColor"*/}
-        {/*      >*/}
-        {/*        <circle cx="12" cy="12" r="10"/>*/}
-        {/*        <path d="M12 8l3 3-3 3-3-3 3-3z"/>*/}
-        {/*      </svg>*/}
-        {/*      <span className="benefit-text">QUALITY</span>*/}
-        {/*    </div>*/}
-        {/*    <div className="benefit">*/}
-        {/*      <svg*/}
-        {/*          className="benefit-icon fast-icon"*/}
-        {/*          xmlns="http://www.w3.org/2000/svg"*/}
-        {/*          viewBox="0 0 24 24"*/}
-        {/*          fill="none"*/}
-        {/*          stroke="currentColor"*/}
-        {/*      >*/}
-        {/*        <path d="M5 12l2 2 4-4 2 2 4-4"/>*/}
-        {/*        <path d="M3 3v18h18"/>*/}
-        {/*      </svg>*/}
-        {/*      <span className="benefit-text">FAST</span>*/}
-        {/*    </div>*/}
-        {/*    <div className="benefit">*/}
-        {/*      <svg*/}
-        {/*          className="benefit-icon industrial-icon"*/}
-        {/*          xmlns="http://www.w3.org/2000/svg"*/}
-        {/*          viewBox="0 0 24 24"*/}
-        {/*          fill="none"*/}
-        {/*          stroke="currentColor"*/}
-        {/*      >*/}
-        {/*        <rect x="3" y="3" width="7" height="8"/>*/}
-        {/*        <rect x="14" y="3" width="7" height="7"/>*/}
-        {/*        <rect x="14" y="14" width="7" height="7"/>*/}
-        {/*        <rect x="3" y="14" width="7" height="7"/>*/}
-        {/*      </svg>*/}
-        {/*      <span className="benefit-text">INDUSTRIAL</span>*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</section>*/}
+        <section className="why-awochem">
+          <h2>WHY AWOCHEM?</h2>
+          <div className="benefits">
+            <div className="benefit">
+              <svg
+                className="benefit-icon quality-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 8l3 3-3 3-3-3 3-3z"/>
+              </svg>
+              <span className="benefit-text">QUALITY</span>
+              <p className="benefit-description">Premium products meeting international standards</p>
+            </div>
+            <div className="benefit">
+              <svg
+                className="benefit-icon fast-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M5 12l2 2 4-4 2 2 4-4"/>
+                <path d="M3 3v18h18"/>
+              </svg>
+              <span className="benefit-text">FAST</span>
+              <p className="benefit-description">Quick delivery and efficient service</p>
+            </div>
+            <div className="benefit">
+              <svg
+                className="benefit-icon industrial-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <rect x="3" y="3" width="7" height="8"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+              <span className="benefit-text">INDUSTRIAL</span>
+              <p className="benefit-description">Solutions for all industrial needs</p>
+            </div>
+          </div>
+        </section>
 
         {/* Explore Our Products Section */}
         <section className="explore-products-section">
+          <div className="section-header">
+            <h2>Explore Our Product Range</h2>
+            <p>Discover our comprehensive range of high-quality chemical solutions</p>
+          </div>
           <div className="products-layout">
             <div className="product-cards">
               {/* Product Card for Specialist Bags */}
               <Link to="/product/category1" className="product-card-link">
-              <div className="product-card card-specialist-bags">
-                <img src={bag} alt="bag"/>
-                <h3>Specialist Bags</h3>
-                <p>All-purpose, accredited, flexible</p>
-              </div>
+                <div className="product-card card-specialist-bags">
+                  <div className="product-image">
+                    <img src={bag} alt="Specialist Bags"/>
+                    <div className="product-overlay">
+                      <span>Learn More</span>
+                    </div>
+                  </div>
+                  <div className="product-content">
+                    <h3>Specialist Bags</h3>
+                    <p>All-purpose, accredited, flexible</p>
+                  </div>
+                </div>
               </Link>
               {/* Product Card for Tray & Dolav Liners */}
               <Link to="/product/category2" className="product-card-link">
-              <div className="product-card card-tray-liners">
-                <img src={tray} alt="bag"/>
-                <h3>Tray & Dolav Liners</h3>
-                <p>Safe, compliant, hygienic</p>
-              </div>
+                <div className="product-card card-tray-liners">
+                  <div className="product-image">
+                    <img src={tray} alt="Tray & Dolav Liners"/>
+                    <div className="product-overlay">
+                      <span>Learn More</span>
+                    </div>
+                  </div>
+                  <div className="product-content">
+                    <h3>Tray & Dolav Liners</h3>
+                    <p>Safe, compliant, hygienic</p>
+                  </div>
+                </div>
               </Link>
               <Link to="/product/category3" className="product-card-link">
-              <div className="product-card card-sheets-tubing">
-                <img src={sheets} alt="bag"/>
-                <h3>Sheets & Tubing</h3>
-                <p>Tough, customisable, protective</p>
-              </div>
+                <div className="product-card card-sheets-tubing">
+                  <div className="product-image">
+                    <img src={sheets} alt="Sheets & Tubing"/>
+                    <div className="product-overlay">
+                      <span>Learn More</span>
+                    </div>
+                  </div>
+                  <div className="product-content">
+                    <h3>Sheets & Tubing</h3>
+                    <p>Tough, customisable, protective</p>
+                  </div>
+                </div>
               </Link>
               <Link to="/product/category4" className="product-card-link">
-              <div className="product-card card-specialist-sacks">
-                <img src={sacks} alt="bag"/>
-                <h3>Specialist Sacks</h3>
-                <p>Adaptable, purpose-built, strong</p>
-              </div>
+                <div className="product-card card-specialist-sacks">
+                  <div className="product-image">
+                    <img src={sacks} alt="Specialist Sacks"/>
+                    <div className="product-overlay">
+                      <span>Learn More</span>
+                    </div>
+                  </div>
+                  <div className="product-content">
+                    <h3>Specialist Sacks</h3>
+                    <p>Adaptable, purpose-built, strong</p>
+                  </div>
+                </div>
               </Link>
             </div>
-
-            <div className="products-description">
-              <h2>Explore Our Product Range</h2>
-              <p>Our entire range is produced at our Lagos locations...</p>
-              <button className="btn-core-products">OUR CORE PRODUCTS</button>
-            </div>
+          </div>
+          <div className="products-cta">
+            <Link to="/products" className="btn-core-products">VIEW ALL PRODUCTS</Link>
           </div>
         </section>
 
-        <section className="action-cta">
-          <h2>Ready to Get Started?</h2>
-          <p>Discover our solutions and take your business to the next level.</p>
-          <div className="cta-buttons">
-            <Link to="/signup" className="mr-3 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">SIGN UP</Link>
-            <Link to="/login" className="mr-3 inline-block rounded px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:bg-neutral-100 hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700 motion-reduce:transition-none">Login</Link>
-          </div>
-        </section>
 
         <section className="why-choose-section">
           <div className="why-choose-content">
