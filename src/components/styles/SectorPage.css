@@ -1,0 +1,171 @@
+.sector-page-wrapper {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.sector-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sector-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: calc(50% - 1rem);
+  cursor: pointer;
+}
+
+.sector-item.full-width {
+  width: 100%;
+  max-width: 600px;
+}
+
+.sector-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sector-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.sector-item h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sector-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.more-info-button {
+  background-color: #0275d8;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.more-info-button:hover {
+  background-color: #025aa5;
+  transform: translateY(-2px);
+}
+
+/* Modal Styles */
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-body img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.modal-body p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sector-container {
+    padding: 2rem 1rem;
+  }
+
+  .sector-item {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .sector-item.full-width {
+    max-width: 500px;
+  }
+
+  .sector-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sector-item h3 {
+    font-size: 1.25rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-body img {
+    max-height: 250px;
+  }
+
+  .modal-body p {
+    font-size: 1rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sector-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sector-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .more-info-button {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .modal-body img {
+    max-height: 200px;
+  }
+
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+}

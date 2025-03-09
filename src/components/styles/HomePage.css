@@ -9,7 +9,6 @@
     flex-direction: column;
     /* min-height: 100vh; */
     font-family: 'Arial', sans-serif;
-    padding: 10px;
   }
 
   .slide-btn {
@@ -358,19 +357,18 @@
   }
 
   .product-cards {
+    order: 2;
     max-width: 100%;
     justify-content: center;
     gap: 15px;
   }
 
-  .product-card-link {
-    width: calc(50% - 10px);
-  }
-
   .products-description {
+    order: 1;
     padding-left: 0;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 0;
+    margin-bottom: 40px;
     align-items: center;
   }
 
@@ -385,6 +383,10 @@
 
   .products-description p {
     font-size: 1rem;
+  }
+
+  .product-card-link {
+    width: calc(50% - 10px);
   }
 
   .btn-core-products {
@@ -402,91 +404,6 @@
     height: 170px;
   }
 }
-
-/* Packaging solution CTA section */
-.packaging-solution-cta {
-    padding: 20px;
-    background: #d8d7d7;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-  }
-  
-  .cta-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    flex-wrap: wrap; 
-    max-width: 1200px; 
-    width: 100%;
-  }
-  
-  .packaging-solution-cta h2 {
-    margin-bottom: 0;
-    font-size: 1.5em;
-    flex-grow: 1; 
-    font-weight: 700;
-  }
-  
-  .packaging-solution-cta button {
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    background: #000;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    white-space: nowrap; 
-  }
-
-  .packaging-solution-cta button:hover {
-    background: #333;
-  }
-.contact-us-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #000;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.action-cta {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #333;
-  margin-top: 40px;
-  color: white;
-}
-.action-cta h2 {
-  margin-bottom: 20px;
-}
-
-.action-cta p {
-  margin-bottom: 30px;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.cta-button {
-  padding: 10px 20px;
-  text-decoration: none;
-  color: white;
-  border-radius: 5px;
-  font-weight: bold;
-}
-.cta-button.signup { background-color: #2196F3; }
-.cta-button.login { background-color: #f44336; }
  
  .our-sectors {
     background-color: #333;
