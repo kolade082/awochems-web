@@ -1,31 +1,30 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import Header from "../layouts/Header";
-import HeroSection from "../HeroSection/HeroSection";
-import Modal from "../Modal/Modal";
+import HeroSection from "../components/HeroSection/HeroSection";
+import Modal from "../components/Modal/Modal";
 import "../styles/SectorPage.css";
-import "../Modal/Modal.css";
+// import "../Modal/Modal.css";
 
 // Import background image
-import sus from "../../assets/images/sus.jpg";
+import sus from "../assets/images/sus.jpg";
 
 // Import darkened icons
-import foodProcessingIcon from "../../assets/icons/Darkened_food-processing.png";
-import foodIngredientsIcon from "../../assets/icons/Darkened_food-ingredients-icon.png";
-import aggregatesIcon from "../../assets/icons/Darkened_aggregates-icon.png";
-import animalIcon from "../../assets/icons/Darkened_Animal-Supplements-icon.png";
-import furnitureIcon from "../../assets/icons/Darkened_furniture-icon.png";
-import laundryIcon from "../../assets/icons/Darkened_laundry-icon.png";
-import pharmaceuticalIcon from "../../assets/icons/Darkened_pharmaceutical-icon.png";
+import foodProcessingIcon from "../assets/icons/Darkened_food-processing.png";
+import foodIngredientsIcon from "../assets/icons/Darkened_food-ingredients-icon.png";
+import aggregatesIcon from "../assets/icons/Darkened_aggregates-icon.png";
+import animalIcon from "../assets/icons/Darkened_Animal-Supplements-icon.png";
+import furnitureIcon from "../assets/icons/Darkened_furniture-icon.png";
+import laundryIcon from "../assets/icons/Darkened_laundry-icon.png";
+import pharmaceuticalIcon from "../assets/icons/Darkened_pharmaceutical-icon.png";
 
 // Import sector images
-import foodprocessing from "../../assets/images/foodprocessing.jpeg";
-import animalfeed from "../../assets/images/animalfeed.jpeg";
-import foodingredients from "../../assets/images/foodingredients.jpeg";
-import furniture from "../../assets/images/furniture.jpeg";
-import laundry from "../../assets/images/laundry.jpeg";
-import aggregrates from "../../assets/images/aggregrates.jpeg";
-import pharm from "../../assets/images/pharm.jpeg";
+import foodprocessing from "../assets/images/foodprocessing.jpeg";
+import animalfeed from "../assets/images/animalfeed.jpeg";
+import foodingredients from "../assets/images/foodingredients.jpeg";
+import furniture from "../assets/images/furniture.jpeg";
+import laundry from "../assets/images/laundry.jpeg";
+import aggregrates from "../assets/images/aggregrates.jpeg";
+import pharm from "../assets/images/pharm.jpeg";
 
 interface Sector {
   icon: string;
@@ -93,7 +92,6 @@ function SectorPage() {
 
   return (
     <div className="sector-page-wrapper">
-      <Header />
       <HeroSection backgroundImage={sus} title="Our Sectors" />
       
       <div className="sector-container">

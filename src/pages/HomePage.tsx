@@ -1,29 +1,28 @@
 import { useState } from "react";
-import Header from "../layouts/Header";
 import "../styles/HomePage.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 
-import bag from "../../assets/images/bags.png";
-import tray from "../../assets/images/Trays-icon.png";
-import sheets from "../../assets/images/sheets.png";
-import sacks from "../../assets/images/sacks.png";
-import company_image from "../../assets/images/company_image.jpg";
-import home2 from "../../assets/images/home2.jpg";
+import bag from "../assets/images/bags.png";
+import tray from "../assets/images/Trays-icon.png";
+import sheets from "../assets/images/sheets.png";
+import sacks from "../assets/images/sacks.png";
+import company_image from "../assets/images/company_image.jpg";
+import home2 from "../assets/images/home2.jpg";
 // import ContactFormSlide from "../ContactSlide/ContactSlide";
 
-import foodProcessingIcon from "../../assets/icons/food-processing.png";
-import foodIngredientsIcon from "../../assets/icons/food-ingredients-icon.png";
-import aggregatesIcon from "../../assets/icons/aggregates-icon.png";
-import animalIcon from "../../assets/icons/Animal-Supplements-icon.png";
-import furnitureIcon from "../../assets/icons/furniture-icon.png";
-import laundryIcon from "../../assets/icons/laundry-icon.png";
-import pharmaceuticalIcon from "../../assets/icons/pharmaceutical-icon@.png";
+import foodProcessingIcon from "../assets/icons/food-processing.png";
+import foodIngredientsIcon from "../assets/icons/food-ingredients-icon.png";
+import aggregatesIcon from "../assets/icons/aggregates-icon.png";
+import animalIcon from "../assets/icons/Animal-Supplements-icon.png";
+import furnitureIcon from "../assets/icons/furniture-icon.png";
+import laundryIcon from "../assets/icons/laundry-icon.png";
+import pharmaceuticalIcon from "../assets/icons/pharmaceutical-icon@.png";
 
-import hrs from "../../assets/icons/24-hours.svg";
-import calendar from "../../assets/icons/calendar.svg";
-import thumbs from "../../assets/icons/thumbs.png";
+import hrs from "../assets/icons/24-hours.svg";
+import calendar from "../assets/icons/calendar.svg";
+import thumbs from "../assets/icons/thumbs.png";
 import {Link} from "react-router-dom";
 
 function HomePage() {
@@ -46,8 +45,6 @@ function HomePage() {
   // console.log(user)
   return (
     <div className="home-page">
-      <Header />
-
       <main>
         {/* Hero Section */}
         <section className="hero">
