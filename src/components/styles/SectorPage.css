@@ -1,27 +1,27 @@
-.sector-page-wrapper {
-  min-height: 100vh;
-  background-color: #f8f9fa;
-}
-
 .sector-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   padding: 4rem 2rem;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
 .sector-item {
   background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   text-align: center;
-  width: calc(50% - 1rem);
+  width: calc(50% - 1.25rem);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .sector-item.full-width {
@@ -30,86 +30,114 @@
 }
 
 .sector-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: rgba(2, 117, 216, 0.2);
 }
 
 .sector-item img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.sector-item:hover img {
+  transform: scale(1.1);
 }
 
 .sector-item h3 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  color: #1a1a1a;
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
 }
 
 .sector-description {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+  font-size: 1.1rem;
 }
 
 .more-info-button {
   background-color: #0275d8;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   border: none;
-  border-radius: 25px;
-  font-weight: bold;
+  border-radius: 30px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: auto;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(2, 117, 216, 0.2);
 }
 
 .more-info-button:hover {
   background-color: #025aa5;
   transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(2, 117, 216, 0.3);
 }
 
 /* Modal Styles */
 .modal-header {
-  padding: 1.5rem;
-  border-bottom: 1px solid #dee2e6;
+  padding: 2rem;
+  border-bottom: 2px solid #eee;
+  background-color: #f8f9fa;
+  border-radius: 15px 15px 0 0;
 }
 
 .modal-header h2 {
   margin: 0;
-  font-size: 1.75rem;
-  color: #333;
+  font-size: 2rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .modal-body {
-  padding: 1.5rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
 }
 
 .modal-body img {
   width: 100%;
-  max-height: 300px;
+  max-height: 400px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .modal-body p {
-  color: #666;
-  line-height: 1.8;
-  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.9;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
 }
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .sector-container {
     padding: 2rem 1rem;
+    gap: 2rem;
   }
 
   .sector-item {
     width: 100%;
     max-width: 500px;
+    padding: 2rem;
   }
 
   .sector-item.full-width {
@@ -117,55 +145,85 @@
   }
 
   .sector-item img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
   .sector-item h3 {
-    font-size: 1.25rem;
-  }
-
-  .modal-header h2 {
     font-size: 1.5rem;
   }
 
+  .modal-header {
+    padding: 1.5rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
   .modal-body img {
-    max-height: 250px;
+    max-height: 300px;
   }
 
   .modal-body p {
-    font-size: 1rem;
-  }
-
-  .cta-content h2 {
-    font-size: 1.75rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
+  .sector-container {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .sector-item {
+    padding: 1.5rem;
+  }
+
   .sector-item img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
   }
 
   .sector-item h3 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .sector-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .more-info-button {
-    padding: 0.5rem 1.25rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .modal-header {
+    padding: 1.25rem;
   }
 
   .modal-header h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+  }
+
+  .modal-body {
+    padding: 1.25rem;
   }
 
   .modal-body img {
-    max-height: 200px;
+    max-height: 250px;
+    margin-bottom: 1.5rem;
   }
 
-  .cta-content h2 {
-    font-size: 1.5rem;
+  .modal-body p {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 }
