@@ -55,7 +55,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} AWO Chemicals. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} AWOCHEM. All rights reserved.</p>
       </div>
     </footer>
   );

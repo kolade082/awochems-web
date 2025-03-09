@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Header from "../layouts/Header";
-import Footer from "../layouts/Footer";
 import "../styles/HomePage.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -168,9 +167,8 @@ function HomePage() {
             </div>
 
             <div className="products-description">
-              <h2>Explore Our Product Range</h2>
-              {/* <p>Our entire range is produced at our Lagos locations...</p>
-              <button className="btn-core-products">OUR CORE PRODUCTS</button> */}
+              <h2>Our Product Categories</h2>
+              <p>We offer a comprehensive range of high-quality nylon packaging solutions designed to meet specific industrial needs. Each category represents our commitment to excellence in material quality, safety standards, and customer satisfaction.</p>
             </div>
           </div>
         </section>
@@ -270,8 +268,6 @@ function HomePage() {
         </section>
 
       </main>
-
-      <Footer/>
     </div>
   );
 }
