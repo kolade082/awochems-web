@@ -4,6 +4,7 @@ import HeroSection from "../components/HeroSection/HeroSection";
 import home2 from "../assets/images/home2.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import { FaSpinner } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import 'react-toastify/dist/ReactToastify.css';
 
 interface FormData {
@@ -37,24 +38,25 @@ function ContactPage() {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('http://localhost:4050/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+            const templateParams = {
+                from_name: formData.name,
+                from_email: formData.email,
+                subject: formData.subject,
+                message: formData.message,
+            };
 
-            if (!response.ok) {
-                const errorData = await response.json().catch(() => null);
-                throw new Error(errorData?.message || 'Failed to submit form');
-            }
+            await emailjs.send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                templateParams,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
 
             toast.success('Message sent successfully! We will get back to you shortly.');
             setFormData(initialFormData);
         } catch (error) {
             console.error('Submission error:', error);
-            toast.error(error instanceof Error ? error.message : 'Error sending message. Please try again later.');
+            toast.error('Error sending message. Please try again later.');
         } finally {
             setIsSubmitting(false);
         }
