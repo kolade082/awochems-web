@@ -5,6 +5,7 @@ import home2 from "../assets/images/home2.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import { FaSpinner } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import { config } from '../config';
 import 'react-toastify/dist/ReactToastify.css';
 
 interface FormData {
@@ -46,10 +47,10 @@ function ContactPage() {
             };
 
             await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                config.emailjs.serviceId,
+                config.emailjs.templateId,
                 templateParams,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                config.emailjs.publicKey
             );
 
             toast.success('Message sent successfully! We will get back to you shortly.');
