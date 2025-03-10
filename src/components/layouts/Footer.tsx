@@ -18,20 +18,20 @@ function Footer() {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/sector">Our Sectors</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/awochems-web">Home</Link></li>
+            <li><Link to="/awochems-web/sector">Our Sectors</Link></li>
+            <li><Link to="/awochems-web/about">About Us</Link></li>
+            <li><Link to="/awochems-web/contact">Contact Us</Link></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h3>Our Products</h3>
           <ul>
-            <li><Link to="/product/category1">Specialist Bags</Link></li>
-            <li><Link to="/product/category2">Tray & Dolav Liners</Link></li>
-            <li><Link to="/product/category3">Sheet & Tubing</Link></li>
-            <li><Link to="/product/category4">Specialist Sacks</Link></li>
+            <li><Link to="/awochems-web/product/category1">Specialist Bags</Link></li>
+            <li><Link to="/awochems-web/product/category2">Tray & Dolav Liners</Link></li>
+            <li><Link to="/awochems-web/product/category3">Sheet & Tubing</Link></li>
+            <li><Link to="/awochems-web/product/category4">Specialist Sacks</Link></li>
           </ul>
         </div>
 

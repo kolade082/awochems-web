@@ -54,8 +54,8 @@ function HomePage() {
               <h1>Welcome to AWOCHEM</h1>
               {/* <p>Your Trusted Partner in Quality Chemical Solutions</p> */}
               <div className="hero-buttons">
-                <Link to="/sectors" className="primary-btn">Explore Sectors</Link>
-                <Link to="/contact" className="secondary-btn">Contact Us</Link>
+                <Link to="/awochems-web/sector" className="primary-btn">Explore Sectors</Link>
+                <Link to="/awochems-web/contact" className="secondary-btn">Contact Us</Link>
               </div>
             </div>
             <div className="dots">
@@ -132,7 +132,7 @@ function HomePage() {
           <div className="products-layout">
             <div className="product-cards">
               {/* Product Card for Specialist Bags */}
-              <Link to="/product/category1" className="product-card-link">
+              <Link to="/awochems-web/product/category1" className="product-card-link">
               <div className="product-card card-specialist-bags">
                 <img src={bag} alt="bag"/>
                 <h3>Specialist Bags</h3>
@@ -140,21 +140,21 @@ function HomePage() {
               </div>
               </Link>
               {/* Product Card for Tray & Dolav Liners */}
-              <Link to="/product/category2" className="product-card-link">
+              <Link to="/awochems-web/product/category2" className="product-card-link">
               <div className="product-card card-tray-liners">
                 <img src={tray} alt="bag"/>
                 <h3>Tray & Dolav Liners</h3>
                 <p>Safe, compliant, hygienic</p>
               </div>
               </Link>
-              <Link to="/product/category3" className="product-card-link">
+              <Link to="/awochems-web/product/category3" className="product-card-link">
               <div className="product-card card-sheets-tubing">
                 <img src={sheets} alt="bag"/>
                 <h3>Sheets & Tubing</h3>
                 <p>Tough, customisable, protective</p>
               </div>
               </Link>
-              <Link to="/product/category4" className="product-card-link">
+              <Link to="/awochems-web/product/category4" className="product-card-link">
               <div className="product-card card-specialist-sacks">
                 <img src={sacks} alt="bag"/>
                 <h3>Specialist Sacks</h3>
@@ -212,7 +212,7 @@ function HomePage() {
           <div className="cta-content">
             <h2>FIND YOUR PACKAGING SOLUTION TODAY!</h2>
             {/*<button>CONTACT US</button>*/}
-            <Link to="/contact" className="contact-us-button">CONTACT US</Link>
+            <Link to="/awochems-web/contact" className="contact-us-button">CONTACT US</Link>
           </div>
         </section>
 
