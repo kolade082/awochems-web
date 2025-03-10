@@ -12,9 +12,9 @@ function App() {
     <Router basename="/awochems-web">
       <Header />
       <Routes>
-        <Route path="/awochems-web" element={<HomePage />} />
-        <Route path="/awochems-web/sector" element={<SectorPage />} />
-        <Route path="/awochems-web/contact" element={<ContactPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/sector" element={<SectorPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
     </Router>

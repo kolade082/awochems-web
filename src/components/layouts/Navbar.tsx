@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/awochems-web" className="navbar-logo">
+        <Link to="/" className="navbar-logo">
           <img src={Logo} alt="AWO Logo" />
         </Link>
 
@@ -26,7 +26,7 @@ function Navbar() {
 
         <ul className={isOpen ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link to="/awochems-web" className="nav-link">
+            <Link to="/" className="nav-link">
               HOME
             </Link>
           </li>
@@ -38,34 +38,34 @@ function Navbar() {
             </div>
             <ul className={isProductsOpen ? "submenu active" : "submenu"}>
               <li>
-                <Link to="/awochems-web/product/category1">Specialist Bag</Link>
+                <Link to="/product/category1">Specialist Bag</Link>
               </li>
               <li>
-                <Link to="/awochems-web/product/category2">Tray & Dolav Liners</Link>
+                <Link to="/product/category2">Tray & Dolav Liners</Link>
               </li>
               <li>
-                <Link to="/awochems-web/product/category3">Sheet & Tubing</Link>
+                <Link to="/product/category3">Sheet & Tubing</Link>
               </li>
               <li>
-                <Link to="/awochems-web/product/category4">Specialist Sacks</Link>
+                <Link to="/product/category4">Specialist Sacks</Link>
               </li>
             </ul>
           </li>
 
           <li className="nav-item">
-            <Link to="/awochems-web/sector" className="nav-link">
+            <Link to="/sector" className="nav-link">
               OUR SECTORS
             </Link>
           </li>
 
           <li className="nav-item">
-            <Link to="/awochems-web/about" className="nav-link">
+            <Link to="/about" className="nav-link">
               ABOUT US
             </Link>
           </li>
 
           <li className="nav-item">
-            <Link to="/awochems-web/contact" className="nav-link">
+            <Link to="/contact" className="nav-link">
               CONTACT US
             </Link>
           </li>
