@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from './pages/HomePage'
 import SectorPage from "./pages/SectorPage"
 import Footer from './components/layouts/Footer'
@@ -9,7 +9,7 @@ import Header from "./components/layouts/Header";
 function App() {
 
   return (
-    <Router>
+    <Router basename="/awochems-web">
       <Header />
       <Routes>
         <Route path="/awochems-web" element={<HomePage />} />
