@@ -137,11 +137,85 @@
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .contact-us-button:hover {
-    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.contact-us-button:active {
+    transform: translateY(-1px);
+}
+
+/* Add fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animations for multiple items */
+.history-content .fade-in:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.vision-mission-section .fade-in:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.executives-profiles .fade-in:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+/* Add hover effects to sections */
+.about-section,
+.history-section,
+.vision-mission-section,
+.executives-section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover,
+.history-section:hover,
+.vision-mission-section:hover,
+.executives-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhance executive profile transitions */
+.executive-profile {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.executive-profile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Add page transition */
+.page-transition {
+    animation: pageFadeIn 0.8s ease-out;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {

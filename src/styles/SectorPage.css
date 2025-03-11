@@ -31,7 +31,7 @@
 
 .sector-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .sector-item img {
@@ -87,11 +87,36 @@
 }
 
 /* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 15px;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
 .modal-header {
   padding: 2rem;
   border-bottom: 1px solid #ddd;
   background-color: #f8f9fa;
-  border-radius: 5px 5px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 
 .modal-header h2 {
@@ -118,14 +143,14 @@
 .modal-body {
   padding: 2rem;
   background-color: white;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 15px 15px;
 }
 
 .modal-body img {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
-  border-radius: 3px;
+  border-radius: 8px;
   margin-bottom: 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -135,6 +160,59 @@
   line-height: 1.8;
   font-size: 1.15rem;
   margin-bottom: 1.5rem;
+}
+
+/* Modal Animation */
+.modal-content {
+  animation: none;
+}
+
+/* Page Transition */
+.page-transition {
+  animation: pageFadeIn 0.8s ease-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animations for sector items */
+.sector-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.sector-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.sector-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.sector-item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.sector-item:nth-child(6) {
+  transition-delay: 0.6s;
+}
+.sector-item:nth-child(7) {
+  transition-delay: 0.7s;
 }
 
 /* Responsive Design */

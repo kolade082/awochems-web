@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import HeroSection from "../components/HeroSection/HeroSection";
 import Modal from "../components/Modal/Modal";
@@ -90,18 +90,34 @@ function SectorPage() {
   const [selectedSector, setSelectedSector] = useState<Sector | null>(null);
   const isLastItemSingle = sectors.length % 2 !== 0;
 
+  useEffect(() => {
+    // Add observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    // Observe all elements with fade-in class
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="sector-page-wrapper">
+    <div className="sector-page-wrapper page-transition">
       <HeroSection backgroundImage={sus} title="Our Sectors" />
       
       <div className="sector-container">
         {sectors.map((sector, index) => (
           <div
-            className={`sector-item ${isLastItemSingle && index === sectors.length - 1 ? 'full-width' : ''}`}
+            className={`sector-item fade-in ${isLastItemSingle && index === sectors.length - 1 ? 'full-width' : ''}`}
             key={index}
             onClick={() => setSelectedSector(sector)}
           >
-            <img src={sector.icon} alt={sector.title} />
+            <img src={sector.icon} alt={sector.title} className="sector-icon" />
             <h3>{sector.title}</h3>
             <p className="sector-description">{sector.description}</p>
             <button className="more-info-button" onClick={() => setSelectedSector(sector)}>
@@ -111,7 +127,7 @@ function SectorPage() {
         ))}
       </div>
 
-      <section className="packaging-solution-cta">
+      <section className="packaging-solution-cta fade-in">
         <div className="cta-content">
           <h2>FIND YOUR PACKAGING SOLUTION TODAY!</h2>
           <Link to="/contact" className="contact-us-button">CONTACT US</Link>
@@ -120,7 +136,7 @@ function SectorPage() {
 
       <Modal isOpen={!!selectedSector} onClose={() => setSelectedSector(null)}>
         {selectedSector && (
-          <div>
+          <div className="modal-content">
             <div className="modal-header">
               <h2>{selectedSector.title}</h2>
             </div>

@@ -5,11 +5,12 @@ interface ExecutiveProfileProps {
     position: string;
     imageUrl: string;
     bio: string;
+    className?: string;
 }
 
-const ExecutiveProfile: React.FC<ExecutiveProfileProps> = ({ name, position, imageUrl, bio }) => {
+const ExecutiveProfile: React.FC<ExecutiveProfileProps> = ({ name, position, imageUrl, bio, className = '' }) => {
     return (
-        <div className="executive-profile">
+        <div className={`executive-profile ${className}`}>
             <img src={imageUrl} alt={name} className="executive-image"/>
             <h3 className="executive-name">{name}</h3>
             <p className="executive-position">{position}</p>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeroSection from "../components/HeroSection/HeroSection";
 import company_image from "../assets/images/company_image.jpg";
 import sus from "../assets/images/sus.jpg";
@@ -26,19 +26,35 @@ const executives: Executive[] = [
         name: "Olukemi Oluwadara",
         position: "Executive Director",
         imageUrl: exec2,
-        bio: "Cognate experience in leading procurement processes, manufacturing, managing product development and deployment to meet customer’s needs, driving quality assurance and implement cost saving savings strategies. Has over 25 years impactful experience in driving business growth and expansion strategies.passionate about achieving excellent results."
+        bio: "Cognate experience in leading procurement processes, manufacturing, managing product development and deployment to meet customer's needs, driving quality assurance and implement cost saving savings strategies. Has over 25 years impactful experience in driving business growth and expansion strategies.passionate about achieving excellent results."
     },
 ];
 
 const AboutPage: React.FC = () => {
+    useEffect(() => {
+        // Add observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <div className="about-page-wrapper">
+        <div className="about-page-wrapper page-transition">
             <HeroSection backgroundImage={company_image} title="About Us" />
             <div className="about-content-container">
-                <section className="about-section">
+                <section className="about-section fade-in">
                     <h2 className="header-text">Our History</h2>
                     <div className="history-content">
-                        <div>
+                        <div className="fade-in">
                             <p>Awochem Limited was incorporated in 19 — and has been providing packaging materials to
                                 the domestic and industrial sector.
                                 The company has seasoned and experienced industrial Chemists and experts who have a deep
@@ -47,7 +63,7 @@ const AboutPage: React.FC = () => {
                                 its present enviable state.
                             </p>
                         </div>
-                        <div>
+                        <div className="fade-in">
                             <p>
                                 Awochem Limited is a manufacturer of different sizes of flexible polyethene packaging for
                                 domestic and commercial uses.
@@ -65,7 +81,7 @@ const AboutPage: React.FC = () => {
                     </div>
                 </section>
 
-                <section className="history-section">
+                <section className="history-section fade-in">
                     <div className="history-content">
                         <h2 className="header-text">Sustainability</h2>
                         <p>Awochem Limited is committed to sustainability in its business operations. The company policy
@@ -73,17 +89,17 @@ const AboutPage: React.FC = () => {
                             The company recognizes their responsibility towards the environment, its employees and the
                             community in which they operate.</p>
                     </div>
-                    <div className="history-image-container">
+                    <div className="history-image-container fade-in">
                         <img src={sus} alt="Our History" className="history-image" />
                     </div>
                 </section>
 
                 <section className="vision-mission-section">
-                    <div className="vision">
+                    <div className="vision fade-in">
                         <h2 className="header-text">Our Vision</h2>
                         <p>Giving value to money for perfect packaging.</p>
                     </div>
-                    <div className="mission">
+                    <div className="mission fade-in">
                         <h2 className="header-text">Our Mission</h2>
                         <ul>
                             <li>To be the best in the industry</li>
@@ -95,7 +111,7 @@ const AboutPage: React.FC = () => {
                     </div>
                 </section>
 
-                <section className="executives-section">
+                <section className="executives-section fade-in">
                     <h2 className="header-text">Our Executives</h2>
                     <div className="executives-profiles">
                         {executives.map((executive, index) => (
@@ -105,19 +121,19 @@ const AboutPage: React.FC = () => {
                                 position={executive.position}
                                 imageUrl={executive.imageUrl}
                                 bio={executive.bio}
+                                className="fade-in"
                             />
                         ))}
                     </div>
                 </section>
             </div>
 
-            <section className="packaging-solution-cta">
+            <section className="packaging-solution-cta fade-in">
                 <div className="cta-content">
                     <h2>FIND YOUR PACKAGING SOLUTION TODAY!</h2>
                     <Link to="/contact" className="contact-us-button">CONTACT US</Link>
                 </div>
             </section>
-
         </div>
     );
 };

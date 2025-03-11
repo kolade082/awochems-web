@@ -6,10 +6,9 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
-  title?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -41,16 +40,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay" role="dialog" aria-modal="true" aria-labelledby={title ? 'modal-title' : undefined}>
+    <div className="modal-overlay">
       <div className="modal-content" ref={modalRef}>
         <button 
           className="modal-close" 
           onClick={onClose}
           aria-label="Close modal"
         >
-          <IoCloseCircle />
+          <IoCloseCircle size={24} />
         </button>
-        {title && <h2 id="modal-title">{title}</h2>}
         {children}
       </div>
     </div>
