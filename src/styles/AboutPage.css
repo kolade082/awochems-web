@@ -1,0 +1,170 @@
+.about-content-container {
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.history-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.history-content > div {
+    margin-bottom: 20px;
+}
+
+.history-content p {
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+    color: #333;
+}
+
+.history-image-container {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    flex: 2;
+}
+
+.about-section h2.header-text {
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+
+.about-section,
+.vision-mission-section,
+.executives-section {
+    background: #fff;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vision-mission-section {
+    display: flex;
+    gap: 20px;
+}
+
+.vision,
+.mission {
+    flex: 1;
+    padding: 20px;
+}
+
+.mission ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.executives-section {
+    margin-bottom: 40px;
+}
+
+.executives-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.executive-profile {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    text-align: center;
+    border: none;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.executive-image {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.executive-name {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.executive-position {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* CTA Section Styles */
+.packaging-solution-cta {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-content h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-us-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .vision-mission-section {
+        flex-direction: column;
+    }
+
+    .executive-profile {
+        width: 100%;
+    }
+
+    .history-section {
+        flex-direction: column;
+    }
+
+    .history-content,
+    .history-image-container {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+
+    .history-image {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+} 

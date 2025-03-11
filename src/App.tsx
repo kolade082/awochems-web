@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage'
 import SectorPage from "./pages/SectorPage"
 import Footer from './components/layouts/Footer'
 import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
 import './App.css'
 import Header from "./components/layouts/Header";
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/sector" element={<SectorPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
       <Footer />
     </Router>
