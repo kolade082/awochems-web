@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhone, FaEnvelope } from "react-icons/fa";
 import "../../assets/styles/FooterStyles.css";
 
 function Footer() {
@@ -46,10 +46,10 @@ function Footer() {
               <FaEnvelope className="contact-icon" />
               <span>zac_y56@yahoo.com</span>
             </li>
-            <li>
+            {/* <li>
               <FaMapMarkerAlt className="contact-icon" />
               <span>123 Business Street, City, Country</span>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

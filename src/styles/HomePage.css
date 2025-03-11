@@ -56,7 +56,7 @@
 
 .hero {
   position: relative;
-  height: 90vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -76,6 +76,8 @@
   z-index: 2;
   width: 80%;
   max-width: 800px;
+  /* opacity: 0; */
+  /* animation: fadeInUp 1s ease forwards; */
 }
 
 .hero-content h1 {
@@ -97,6 +99,8 @@
   gap: 2rem;
   justify-content: center;
   margin-top: 2rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.3s;
 }
 
 .primary-btn, .secondary-btn {
@@ -161,7 +165,7 @@
 
 
 .why-awochem {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   background-color: #f8f9fa;
 }
   
@@ -188,6 +192,8 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
 }
   
 .benefit:hover {
@@ -259,6 +265,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   border-radius: 10px;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .product-card:hover {
@@ -292,6 +300,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .products-description h2 {
@@ -435,11 +445,13 @@
     margin: 0 auto;
   }
   
-  .sector-description {
+  .home-sector-description {
     flex: 1;
     text-align: left;
     min-width: 300px;
     margin-left: 50px;
+    opacity: 0;
+    transform: translateY(20px);
   }
   
   .sector-icons {
@@ -450,23 +462,25 @@
     gap: 20px;
   }
   
-  .sector-items {
+  .home-sector-items {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
     flex: 1;
     min-width: 150px;
+    opacity: 0;
+    transform: translateY(20px);
   }
 
-  .sector-items img {
+  .home-sector-items img {
     width: 150px; 
     height: 150px;
     margin-bottom: 15px;
     object-fit: contain;
   }
   
-  .sector-items h3 {
+  .home-sector-items h3 {
     font-size: 1rem;
     font-weight: bold; 
     margin-bottom: 5px; 
@@ -543,6 +557,8 @@
   
 .why-choose-text {
   padding-right: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
 }
   
 .why-choose-text h2 {
@@ -551,6 +567,7 @@
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 1rem;
+  
 }
   
 .why-choose-text h2::after {
@@ -584,6 +601,8 @@
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
 }
   
 .icon-item:hover {
@@ -660,4 +679,382 @@
     font-size: 1rem;
   }
 }
+  
+/* Introduction Section */
+.intro-section {
+  /* padding: 60px 20px; */
+  background-color: #f8f9fa;
+  opacity: 0;
+}
+
+.intro-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Enhanced Benefits Section */
+.benefit-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.benefit-features li {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.benefit-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #007bff;
+}
+
+/* Product Highlights */
+.product-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.highlight {
+  text-align: center;
+}
+
+.highlight-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Partnership Benefits */
+.partnership-benefits {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.partnership-benefit {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.partnership-benefit h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.partnership-benefit p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Sector Expertise */
+.sector-expertise {
+  margin-top: 30px;
+}
+
+.sector-expertise ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.sector-expertise li {
+  padding-left: 25px;
+  position: relative;
+  color: #666;
+}
+
+.sector-expertise li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #007bff;
+}
+
+/* Enhanced CTA Section */
+.packaging-solution-cta {
+  background-color: #007bff;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.packaging-solution-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.packaging-solution-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.contact-us-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: white;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.contact-us-button:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .intro-content h2 {
+    font-size: 2rem;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .partnership-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .sector-expertise ul {
+    grid-template-columns: 1fr;
+  }
+
+  .packaging-solution-cta h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+
+  .highlight-number {
+    font-size: 1.5rem;
+  }
+}
+  
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Add initial states for animations */
+.intro-section.animate {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.benefit.animate {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.product-card.animate {
+  animation: scaleIn 0.8s ease forwards;
+}
+
+.products-description.animate {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.why-choose-text.animate {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.icon-item.animate {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.home-sector-items.animate {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.home-sector-description.animate {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+/* Stagger delays for multiple items */
+.benefit:nth-child(1).animate { animation-delay: 0.2s; }
+.benefit:nth-child(2).animate { animation-delay: 0.4s; }
+.benefit:nth-child(3).animate { animation-delay: 0.6s; }
+
+.product-card:nth-child(1).animate { animation-delay: 0.2s; }
+.product-card:nth-child(2).animate { animation-delay: 0.3s; }
+.product-card:nth-child(3).animate { animation-delay: 0.4s; }
+.product-card:nth-child(4).animate { animation-delay: 0.5s; }
+
+.icon-item:nth-child(1).animate { animation-delay: 0.2s; }
+.icon-item:nth-child(2).animate { animation-delay: 0.4s; }
+.icon-item:nth-child(3).animate { animation-delay: 0.6s; }
+
+.home-sector-items:nth-child(1).animate { animation-delay: 0.2s; }
+.home-sector-items:nth-child(2).animate { animation-delay: 0.3s; }
+.home-sector-items:nth-child(3).animate { animation-delay: 0.4s; }
+.home-sector-items:nth-child(4).animate { animation-delay: 0.5s; }
+  
+/* Initial states for all animated elements */
+.benefit,
+.product-card,
+.products-description,
+.why-choose-text,
+.icon-item,
+.home-sector-items,
+.home-sector-description {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Animation classes */
+.intro-section.animate {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.benefit.animate {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.product-card.animate {
+  animation: scaleIn 0.8s ease forwards;
+}
+
+.products-description.animate {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.why-choose-text.animate {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.icon-item.animate {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.home-sector-items.animate {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.home-sector-description.animate {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+/* Stagger delays for multiple items */
+.benefit:nth-child(1).animate { animation-delay: 0.2s; }
+.benefit:nth-child(2).animate { animation-delay: 0.4s; }
+.benefit:nth-child(3).animate { animation-delay: 0.6s; }
+
+.product-card:nth-child(1).animate { animation-delay: 0.2s; }
+.product-card:nth-child(2).animate { animation-delay: 0.3s; }
+.product-card:nth-child(3).animate { animation-delay: 0.4s; }
+.product-card:nth-child(4).animate { animation-delay: 0.5s; }
+
+.icon-item:nth-child(1).animate { animation-delay: 0.2s; }
+.icon-item:nth-child(2).animate { animation-delay: 0.4s; }
+.icon-item:nth-child(3).animate { animation-delay: 0.6s; }
+
+.home-sector-items:nth-child(1).animate { animation-delay: 0.2s; }
+.home-sector-items:nth-child(2).animate { animation-delay: 0.3s; }
+.home-sector-items:nth-child(3).animate { animation-delay: 0.4s; }
+.home-sector-items:nth-child(4).animate { animation-delay: 0.5s; }
   
