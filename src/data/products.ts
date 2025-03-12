@@ -1,10 +1,12 @@
 import { ProductData } from "../types/product";
-import bag from "../assets/images/bags.png";
-import tray from "../assets/images/Trays-icon.png";
-import sheets from "../assets/images/sheets.png";
-import sacks from "../assets/images/sacks.png";
-import sheetImage from "../assets/images/Sheetstubing.png";
-import productImage from "../assets/images/specialbags.png";
+import specialistBagsImage from "../assets/images/specialbags.png";
+import specialistBagsHeroImage from "../assets/images/bags.png";
+import sheetsTubingHeroImage from "../assets/images/sheets.png";
+import sheetTubingImage from "../assets/images/Sheetstubing.png";
+import trayDolavLinersHeroImage from "../assets/images/Trays-icon.png";
+import trayDolavLinersImage from "../assets/images/dolav.png";
+import specialistSacksHeroImage from "../assets/images/sacks.png";
+import specialistSacksImage from "../assets/images/Specialist-Sacks.jpg";
 
 export const PRODUCTS: Record<string, ProductData> = {
   "specialist-bags": {
@@ -12,8 +14,8 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: "Specialist Bags",
     description:
       "Specialist bags designed to meet the needs of specific industries and applications, offering enhanced durability, security, and functionality.",
-    image: productImage,
-    heroImage: bag,
+    image: specialistBagsImage,
+    heroImage: specialistBagsHeroImage,
     heroTitle: "Specialist Bags",
     features: [
       "Enhanced Durability with reinforced materials",
@@ -28,13 +30,13 @@ export const PRODUCTS: Record<string, ProductData> = {
     relatedProducts: [
       {
         title: "Tray & Dolav Liners",
-        image: tray,
-        path: "/product/tray-liners",
+        image: trayDolavLinersHeroImage,
+        path: "/product/tray-dolav-liners",
       },
-      { title: "Sheet & Tubing", image: sheets, path: "/product/sheet-tubing" },
+      { title: "Sheet & Tubing", image: sheetsTubingHeroImage, path: "/product/sheet-tubing" },
       {
         title: "Specialist Sacks",
-        image: sacks,
+        image: specialistSacksHeroImage,
         path: "/product/specialist-sacks",
       },
     ],
@@ -44,8 +46,8 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: "Sheet & Tubing",
     description:
       "Versatile sheet and tubing solutions suitable for a wide range of applications, from industrial packaging to protective coverings.",
-    image: sheetImage,
-    heroImage: sheets,
+    image: sheetTubingImage,
+    heroImage: sheetsTubingHeroImage,
     heroTitle: "Sheet & Tubing",
     features: [
       "Customizable thickness and width",
@@ -60,17 +62,17 @@ export const PRODUCTS: Record<string, ProductData> = {
     relatedProducts: [
       {
         title: "Specialist Bags",
-        image: bag,
+        image: specialistBagsHeroImage,
         path: "/product/specialist-bags",
       },
       {
         title: "Tray & Dolav Liners",
-        image: tray,
-        path: "/product/tray-liners",
+        image: trayDolavLinersHeroImage,
+        path: "/product/tray-dolav-liners",
       },
       {
         title: "Specialist Sacks",
-        image: sacks,
+        image: specialistSacksHeroImage,
         path: "/product/specialist-sacks",
       },
     ],
@@ -80,8 +82,8 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: "Tray & Dolav Liners",
     description:
       "High-quality liners designed for trays and Dolavs, ensuring hygiene and protection in food processing and storage.",
-    image: tray,
-    heroImage: tray,
+    image: trayDolavLinersImage,
+    heroImage: trayDolavLinersHeroImage,
     heroTitle: "Tray & Dolav Liners",
     features: [
       "Made from FDA-approved materials",
@@ -94,9 +96,21 @@ export const PRODUCTS: Record<string, ProductData> = {
       { name: "Color", value: "Clear" },
     ],
     relatedProducts: [
-      { title: "Specialist Bags", image: bag, path: "/product/category1" },
-      { title: "Sheet & Tubing", image: sheets, path: "/product/category3" },
-      { title: "Specialist Sacks", image: sacks, path: "/product/category4" },
+      {
+        title: "Specialist Bags",
+        image: specialistBagsHeroImage,
+        path: "/product/specialist-bags",
+      },
+      {
+        title: "Sheet & Tubing",
+        image: sheetsTubingHeroImage,
+        path: "/product/sheet-tubing",
+      },
+      {
+        title: "Specialist Sacks",
+        image: specialistSacksHeroImage,
+        path: "/product/specialist-sacks",
+      },
     ],
   },
   "specialist-sacks": {
@@ -104,8 +118,8 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: "Specialist Sacks",
     description:
       "Customized sack solutions engineered for durability and tailored to meet the unique requirements of various industries.",
-    image: sacks,
-    heroImage: sacks,
+    image: specialistSacksImage,
+    heroImage: specialistSacksHeroImage,
     heroTitle: "Specialist Sacks",
     features: [
       "Reinforced handles for heavy loads",
@@ -118,9 +132,21 @@ export const PRODUCTS: Record<string, ProductData> = {
       { name: "Closure Type", value: "Stitching, zippers, or heat seal" },
     ],
     relatedProducts: [
-      { title: "Specialist Bags", image: bag, path: "/product/category1" },
-      { title: "Tray & Dolav Liners", image: tray, path: "/product/category2" },
-      { title: "Sheet & Tubing", image: sheets, path: "/product/category3" },
+      {
+        title: "Specialist Bags",
+        image: specialistBagsHeroImage,
+        path: "/product/specialist-bags",
+      },
+      {
+        title: "Tray & Dolav Liners",
+        image: trayDolavLinersHeroImage,
+        path: "/product/tray-dolav-liners",
+      },
+      {
+        title: "Sheet & Tubing",
+        image: sheetsTubingHeroImage,
+        path: "/product/sheet-tubing",
+      },
     ],
   },
 };
