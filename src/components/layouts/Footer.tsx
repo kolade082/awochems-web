@@ -28,10 +28,10 @@ function Footer() {
         <div className="footer-section">
           <h3>Our Products</h3>
           <ul>
-            <li><Link to="/product/category1">Specialist Bags</Link></li>
-            <li><Link to="/product/category2">Tray & Dolav Liners</Link></li>
-            <li><Link to="/product/category3">Sheet & Tubing</Link></li>
-            <li><Link to="/product/category4">Specialist Sacks</Link></li>
+            <li><Link to="/product/specialist-bags">Specialist Bags</Link></li>
+            <li><Link to="/product/tray-dolav-liners">Tray & Dolav Liners</Link></li>
+            <li><Link to="/product/sheet-tubing">Sheet & Tubing</Link></li>
+            <li><Link to="/product/specialist-sacks">Specialist Sacks</Link></li>
           </ul>
         </div>
 

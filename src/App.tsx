@@ -4,6 +4,7 @@ import SectorPage from "./pages/SectorPage"
 import Footer from './components/layouts/Footer'
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
+import ProductPage from "./pages/ProductPage";
 import './App.css'
 import Header from "./components/layouts/Header";
 import ScrollToTop from "./components/ScrollToTop";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/sector" element={<SectorPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/product/:productId" element={<ProductPage />} />
       </Routes>
       <Footer />
     </Router>

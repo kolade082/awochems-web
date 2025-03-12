@@ -79,16 +79,16 @@ function Navbar() {
             </div>
             <ul className={`submenu ${isProductsOpen ? "active" : ""}`}>
               <li>
-                <Link to="/product/category1" onClick={handleLinkClick}>Specialist Bag</Link>
+                <Link to="/product/specialist-bags" onClick={handleLinkClick}>Specialist Bag</Link>
               </li>
               <li>
-                <Link to="/product/category2" onClick={handleLinkClick}>Tray & Dolav Liners</Link>
+                <Link to="/product/tray-dolav-liners" onClick={handleLinkClick}>Tray & Dolav Liners</Link>
               </li>
               <li>
-                <Link to="/product/category3" onClick={handleLinkClick}>Sheet & Tubing</Link>
+                <Link to="/product/sheet-tubing" onClick={handleLinkClick}>Sheet & Tubing</Link>
               </li>
               <li>
-                <Link to="/product/category4" onClick={handleLinkClick}>Specialist Sacks</Link>
+                <Link to="/product/specialist-sacks" onClick={handleLinkClick}>Specialist Sacks</Link>
               </li>
             </ul>
           </li>
