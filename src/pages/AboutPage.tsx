@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import HeroSection from "../components/HeroSection/HeroSection";
 import company_image from "../assets/images/company_image.jpg";
 import sus from "../assets/images/sus.jpg";
-import exec1 from "../assets/images/exec1.jpeg";
+import exec1 from "../assets/images/exec1.png";
 import exec2 from "../assets/images/exec2.jpg";
 import '../styles/AboutPage.css';
 import ExecutiveProfile from "../components/ExecutiveProfile/ExecutiveProfile";
