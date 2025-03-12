@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from './pages/HomePage'
 import SectorPage from "./pages/SectorPage"
 import Footer from './components/layouts/Footer'
@@ -6,11 +6,12 @@ import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import './App.css'
 import Header from "./components/layouts/Header";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-
   return (
-    <Router basename="/awochems-web">
+    <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
