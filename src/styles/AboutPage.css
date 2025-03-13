@@ -116,41 +116,6 @@
     font-size: 1rem;
 }
 
-/* CTA Section Styles */
-.packaging-solution-cta {
-    background-color: #f8f9fa;
-    padding: 60px 20px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.cta-content h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.contact-us-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-us-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-}
-
-.contact-us-button:active {
-    transform: translateY(-1px);
-}
-
 /* Add fade-in animation */
 .fade-in {
     opacity: 0;
