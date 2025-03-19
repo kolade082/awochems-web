@@ -9,8 +9,8 @@ import specialistSacksHeroImage from "../assets/images/sacks.png";
 import specialistSacksImage from "../assets/images/Specialist-Sacks.jpg";
 
 export const PRODUCTS: Record<string, ProductData> = {
-  "specialist-bags": {
-    id: "specialist-bags",
+  "packaging-industrial-bags": {
+    id: "packaging-industrial-bags",
     title: "Specialist Bags",
     description:
       "Specialist bags designed to meet the needs of specific industries and applications, offering enhanced durability, security, and functionality.",
@@ -41,8 +41,8 @@ export const PRODUCTS: Record<string, ProductData> = {
       },
     ],
   },
-  "sheet-tubing": {
-    id: "sheet-tubing",
+  "food-consumer-packaging": {
+    id: "food-consumer-packaging",
     title: "Sheet & Tubing",
     description:
       "Versatile sheet and tubing solutions suitable for a wide range of applications, from industrial packaging to protective coverings.",
@@ -77,8 +77,8 @@ export const PRODUCTS: Record<string, ProductData> = {
       },
     ],
   },
-  "tray-dolav-liners": {
-    id: "tray-dolav-liners",
+  "printing-customisation": {
+    id: "printing-customisation",
     title: "Tray & Dolav Liners",
     description:
       "High-quality liners designed for trays and Dolavs, ensuring hygiene and protection in food processing and storage.",
@@ -113,8 +113,8 @@ export const PRODUCTS: Record<string, ProductData> = {
       },
     ],
   },
-  "specialist-sacks": {
-    id: "specialist-sacks",
+  "stretch-shrink-wraps": {
+    id: "stretch-shrink-wraps",
     title: "Specialist Sacks",
     description:
       "Customized sack solutions engineered for durability and tailored to meet the unique requirements of various industries.",

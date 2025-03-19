@@ -243,6 +243,7 @@
   justify-content: flex-end;
   max-width: calc(50% - 10px);
   gap: 20px;
+  align-items: stretch;
 }
 
 .product-card-link {
@@ -267,6 +268,8 @@
   border-radius: 10px;
   opacity: 0;
   transform: translateY(20px);
+  min-height: 100%;
+  justify-content: space-between; 
 }
 
 .product-card:hover {
@@ -275,8 +278,8 @@
 }
 
 .product-card img {
-  width: 220px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
   justify-content: center;
   margin-bottom: 1rem;
   object-fit: contain;
@@ -356,10 +359,10 @@
   box-shadow: 0 5px 15px rgba(2, 117, 216, 0.3);
 }
 
-.card-specialist-bags { background-color: #3c4d7b; }
+.card-packaging-bags { background-color: #3c4d7b; }
 .card-tray-liners { background-color: #4b7e93; }
 .card-sheets-tubing { background-color: #4b7e93; }
-.card-specialist-sacks { background-color: #3c4d7b; }
+.card-wraps { background-color: #3c4d7b; }
 
 @media (max-width: 768px) {
   .products-layout {

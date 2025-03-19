@@ -6,9 +6,9 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import bag from "../assets/images/bags.png";
+import packagingBags from "../assets/images/bags.png";
 import tray from "../assets/images/Trays-icon.png";
-import sheets from "../assets/images/sheets.png";
+import cardWraps from "../assets/images/sheets.png";
 import sacks from "../assets/images/sacks.png";
 import company_image from "../assets/images/company_image.jpg";
 import home2 from "../assets/images/home2.jpg";
@@ -40,18 +40,20 @@ function HomePage() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
+            entry.target.classList.add("animate");
           }
         });
       },
       {
         threshold: 0.1,
-        rootMargin: '0px'
+        rootMargin: "0px",
       }
     );
 
     // Observe all animated elements
-    const elements = document.querySelectorAll('.intro-section, .benefit, .product-card, .products-description, .why-choose-text, .icon-item, .home-sector-items, .home-sector-description');
+    const elements = document.querySelectorAll(
+      ".intro-section, .benefit, .product-card, .products-description, .why-choose-text, .icon-item, .home-sector-items, .home-sector-description"
+    );
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -125,8 +127,7 @@ function HomePage() {
         {/* Why Awochem? Section */}
         <section className="why-awochem">
           <div className="benefits">
-
-          <div className="benefit">
+            <div className="benefit">
               <svg
                 className="benefit-icon industrial-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +150,7 @@ function HomePage() {
                 <li>Industry-Specific Solutions</li>
               </ul>
             </div>
-            
+
             <div className="benefit">
               <svg
                 className="benefit-icon quality-icon"
@@ -172,7 +173,6 @@ function HomePage() {
               </ul>
             </div>
 
-
             <div className="benefit">
               <svg
                 className="benefit-icon fast-icon"
@@ -192,7 +192,6 @@ function HomePage() {
                 <li>Flexible Delivery Options</li>
               </ul>
             </div>
-
           </div>
         </section>
 
@@ -201,33 +200,33 @@ function HomePage() {
           <div className="products-layout">
             <div className="product-cards">
               {/* Product Card for Specialist Bags */}
-              <Link to="/product/category1" className="product-card-link">
-                <div className="product-card card-specialist-bags">
-                  <img src={bag} alt="bag" />
-                  <h3>Specialist Bags</h3>
-                  <p>All-purpose, accredited, flexible</p>
+              <Link to="/product/packaging-industrial-bags" className="product-card-link">
+                <div className="product-card card-packaging-bags">
+                  <img src={packagingBags} alt="packagingBags" />
+                  <h3>Packaging & Industrial Bags</h3>
+                  <p>Durable, versatile, high-quality</p>
                 </div>
               </Link>
               {/* Product Card for Tray & Dolav Liners */}
-              <Link to="/product/category2" className="product-card-link">
+              <Link to="/product/food-consumer-packaging" className="product-card-link">
                 <div className="product-card card-tray-liners">
                   <img src={tray} alt="bag" />
-                  <h3>Tray & Dolav Liners</h3>
-                  <p>Safe, compliant, hygienic</p>
+                  <h3>Food & Consumer Packaging</h3>
+                  <p>Safe, hygienic, reliable</p>
                 </div>
               </Link>
-              <Link to="/product/category3" className="product-card-link">
+              <Link to="/product/printing-customisation" className="product-card-link">
                 <div className="product-card card-sheets-tubing">
-                  <img src={sheets} alt="bag" />
-                  <h3>Sheets & Tubing</h3>
-                  <p>Tough, customisable, protective</p>
+                  <img src={sacks} alt="bag" />
+                  <h3>Printing & Customisation</h3>
+                  <p>Custom prints, high-quality branding</p>
                 </div>
               </Link>
-              <Link to="/product/category4" className="product-card-link">
-                <div className="product-card card-specialist-sacks">
-                  <img src={sacks} alt="bag" />
-                  <h3>Specialist Sacks</h3>
-                  <p>Adaptable, purpose-built, strong</p>
+              <Link to="/product/stretch-shrink-wraps" className="product-card-link">
+                <div className="product-card card-wraps">
+                  <img src={cardWraps} alt="cardWraps" />
+                  <h3>Stretch & Shrink Wraps</h3>
+                  <p>Flexible, protective, strong</p>
                 </div>
               </Link>
             </div>
