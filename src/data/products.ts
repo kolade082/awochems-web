@@ -1,12 +1,13 @@
 import { ProductData } from "../types/product";
-import specialistBagsImage from "../assets/images/specialbags.png";
-import specialistBagsHeroImage from "../assets/images/bags.png";
-import sheetsTubingHeroImage from "../assets/images/sheets.png";
-import sheetTubingImage from "../assets/images/Sheetstubing.png";
-import trayDolavLinersHeroImage from "../assets/images/Trays-icon.png";
-import trayDolavLinersImage from "../assets/images/dolav.png";
-import specialistSacksHeroImage from "../assets/images/sacks.png";
-import specialistSacksImage from "../assets/images/Specialist-Sacks.jpg";
+import printingCustomisationImage from "../assets/images/customise-nylon.jpg.avif";
+import printingCustomisationHeroImage from "../assets/images/bags.png";
+import stretchShrinkWrapsHeroImage from "../assets/images/sheets.png";
+import stretchShrinkWrapsImage from "../assets/images/shrink-wraps.jpg";
+import foodConsumerPackagingHeroImage from "../assets/images/bread-hero.jpg.webp";
+import foodConsumerPackagingImage from "../assets/images/bread-bags.jpg";
+import foodConsumerPackagingOutlineImage from "../assets/images/bread-outline.png";
+import packagingBagsHeroImage from "../assets/images/sacks.png";
+import packagingBagsImage from "../assets/images/Sheetstubing.png";
 
 export const PRODUCTS: Record<string, ProductData> = {
   "packaging-industrial-bags": {
@@ -14,8 +15,8 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: "Packaging & Industrial Bags",
     description:
       "A wide range of industrial bags for various applications, including packaging for foam, preformed items, and more.",
-    image: specialistBagsImage,
-    heroImage: specialistBagsHeroImage,
+    image: packagingBagsImage,
+    heroImage: packagingBagsHeroImage,
     heroTitle: "Packaging & Industrial Bags",
     features: [
       "Special bags for foam industry (for mattresses)",
@@ -36,17 +37,17 @@ export const PRODUCTS: Record<string, ProductData> = {
     relatedProducts: [
       {
         title: "Food & Consumer Packaging",
-        image: trayDolavLinersHeroImage,
+        image: foodConsumerPackagingOutlineImage,
         path: "/product/food-consumer-packaging",
       },
       {
         title: "Printing & Customisation",
-        image: sheetsTubingHeroImage,
+        image: printingCustomisationHeroImage,
         path: "/product/printing-customisation",
       },
       {
         title: "Stretch & Shrink Wraps",
-        image: specialistSacksHeroImage,
+        image: stretchShrinkWrapsHeroImage,
         path: "/product/stretch-shrink-wraps",
       },
     ],
@@ -56,8 +57,8 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: "Food & Consumer Packaging",
     description:
       "Packaging solutions for food products, including bread wrappers and packaging for consumer goods.",
-    image: sheetTubingImage,
-    heroImage: sheetsTubingHeroImage,
+    image: foodConsumerPackagingImage,
+    heroImage: foodConsumerPackagingHeroImage,
     heroTitle: "Food & Consumer Packaging",
     features: [
       "Bread wrappers designed for freshness and durability",
@@ -75,17 +76,17 @@ export const PRODUCTS: Record<string, ProductData> = {
     relatedProducts: [
       {
         title: "Packaging & Industrial Bags",
-        image: specialistBagsHeroImage,
+        image: packagingBagsHeroImage,
         path: "/product/packaging-industrial-bags",
       },
       {
         title: "Printing & Customisation",
-        image: sheetsTubingHeroImage,
+        image: printingCustomisationHeroImage,
         path: "/product/printing-customisation",
       },
       {
         title: "Stretch & Shrink Wraps",
-        image: specialistSacksHeroImage,
+        image: stretchShrinkWrapsHeroImage,
         path: "/product/stretch-shrink-wraps",
       },
     ],
@@ -95,8 +96,8 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: "Printing & Customisation",
     description:
       "Custom printing solutions for packaging materials, including nylon, Biaxially-Oriented Polypropylene (BOPP), Low-Density Polyethylene (LDPE), and High-Density Polyethylene (HDPE) films.",
-    image: trayDolavLinersImage,
-    heroImage: trayDolavLinersHeroImage,
+    image: printingCustomisationImage,
+    heroImage: printingCustomisationHeroImage,
     heroTitle: "Printing & Customisation",
     features: [
       "Printing available on Biaxially-Oriented Polypropylene (BOPP), Low-Density Polyethylene (LDPE), and High-Density Polyethylene (HDPE) materials",
@@ -114,17 +115,17 @@ export const PRODUCTS: Record<string, ProductData> = {
     relatedProducts: [
       {
         title: "Packaging & Industrial Bags",
-        image: specialistBagsHeroImage,
+        image: packagingBagsHeroImage,
         path: "/product/packaging-industrial-bags",
       },
       {
         title: "Food & Consumer Packaging",
-        image: sheetsTubingHeroImage,
+        image: foodConsumerPackagingOutlineImage,
         path: "/product/food-consumer-packaging",
       },
       {
         title: "Stretch & Shrink Wraps",
-        image: specialistSacksHeroImage,
+        image: stretchShrinkWrapsHeroImage,
         path: "/product/stretch-shrink-wraps",
       },
     ],
@@ -134,8 +135,8 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: "Stretch & Shrink Wraps",
     description:
       "Stretch and shrink wraps made from durable nylon, ideal for securing and protecting products during storage or transit.",
-    image: specialistSacksImage,
-    heroImage: specialistSacksHeroImage,
+    image: stretchShrinkWrapsImage,
+    heroImage: stretchShrinkWrapsHeroImage,
     heroTitle: "Stretch & Shrink Wraps",
     features: [
       "High-strength nylon for durability",
@@ -149,17 +150,17 @@ export const PRODUCTS: Record<string, ProductData> = {
     relatedProducts: [
       {
         title: "Packaging & Industrial Bags",
-        image: specialistBagsHeroImage,
+        image: packagingBagsHeroImage,
         path: "/product/packaging-industrial-bags",
       },
       {
         title: "Food & Consumer Packaging",
-        image: sheetsTubingHeroImage,
+        image: foodConsumerPackagingOutlineImage,
         path: "/product/food-consumer-packaging",
       },
       {
         title: "Printing & Customisation",
-        image: sheetsTubingHeroImage,
+        image: stretchShrinkWrapsHeroImage,
         path: "/product/printing-customisation",
       },
     ],

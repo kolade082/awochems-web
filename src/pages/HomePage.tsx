@@ -6,10 +6,10 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import packagingBags from "../assets/images/bags.png";
-import tray from "../assets/images/Trays-icon.png";
+import printingCustomisation from "../assets/images/bags.png";
+import foodConsumerPackaging from "../assets/images/bread-outline.png";
 import cardWraps from "../assets/images/sheets.png";
-import sacks from "../assets/images/sacks.png";
+import packagingBags from "../assets/images/sacks.png";
 import company_image from "../assets/images/company_image.jpg";
 import home2 from "../assets/images/home2.jpg";
 // import ContactFormSlide from "../ContactSlide/ContactSlide";
@@ -209,15 +209,15 @@ function HomePage() {
               </Link>
               {/* Product Card for Tray & Dolav Liners */}
               <Link to="/product/food-consumer-packaging" className="product-card-link">
-                <div className="product-card card-tray-liners">
-                  <img src={tray} alt="bag" />
+                <div className="product-card card-food-consumer-packaging">
+                  <img src={foodConsumerPackaging} alt="bag" />
                   <h3>Food & Consumer Packaging</h3>
                   <p>Safe, hygienic, reliable</p>
                 </div>
               </Link>
               <Link to="/product/printing-customisation" className="product-card-link">
-                <div className="product-card card-sheets-tubing">
-                  <img src={sacks} alt="bag" />
+                <div className="product-card card-printing-customisation">
+                  <img src={printingCustomisation} alt="bag" />
                   <h3>Printing & Customisation</h3>
                   <p>Custom prints, high-quality branding</p>
                 </div>
