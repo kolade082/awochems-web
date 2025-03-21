@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import HeroSection from "../components/HeroSection/HeroSection";
-import company_image from "../assets/images/company_image.jpg";
+import heroImage from "../assets/images/main-hero-1.jpg.webp";
 import sus from "../assets/images/sus.jpg";
 import exec1 from "../assets/images/exec1.png";
 import exec2 from "../assets/images/exec2.jpg";
@@ -49,7 +49,7 @@ const AboutPage: React.FC = () => {
 
     return (
         <div className="about-page-wrapper page-transition">
-            <HeroSection backgroundImage={company_image} title="About Us" />
+            <HeroSection backgroundImage={heroImage} title="About Us" />
             <div className="about-content-container">
                 <section className="about-section fade-in">
                     <h2 className="header-text">Our History</h2>

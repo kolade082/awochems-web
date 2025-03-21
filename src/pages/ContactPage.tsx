@@ -1,7 +1,7 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
 import '../styles/ContactPage.css';
 import HeroSection from "../components/HeroSection/HeroSection";
-import home2 from "../assets/images/home2.jpg";
+import heroImage from "../assets/images/main-hero-2.jpg.avif";
 import { ToastContainer, toast } from 'react-toastify';
 import { FaSpinner } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
@@ -77,7 +77,7 @@ function ContactPage() {
                 pauseOnHover 
             />
             <HeroSection
-                backgroundImage={home2}
+                backgroundImage={heroImage}
                 title="Contact Us"
             />
             <div className="contact-container">

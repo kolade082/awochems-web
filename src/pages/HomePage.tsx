@@ -10,10 +10,10 @@ import printingCustomisation from "../assets/images/bags.png";
 import foodConsumerPackaging from "../assets/images/bread-outline.png";
 import cardWraps from "../assets/images/sheets.png";
 import packagingBags from "../assets/images/sacks.png";
-import company_image from "../assets/images/company_image.jpg";
-import home2 from "../assets/images/home2.jpg";
-// import ContactFormSlide from "../ContactSlide/ContactSlide";
 
+import heroImage1 from "../assets/images/main-hero-1.jpg.webp";
+import heroImage2 from "../assets/images/main-hero-2.jpg.avif";
+import heroImage3 from "../assets/images/main-hero-3.jpg.webp";
 import foodProcessingIcon from "../assets/icons/food-processing.png";
 import foodIngredientsIcon from "../assets/icons/food-ingredients-icon.png";
 import aggregatesIcon from "../assets/icons/aggregates-icon.png";
@@ -30,8 +30,9 @@ import { Link } from "react-router-dom";
 function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    <img src={company_image} alt="Slide 1" />,
-    <img src={home2} alt="Slide 2" />,
+    <img src={heroImage1} alt="Slide 1" />,
+    <img src={heroImage2} alt="Slide 2" />,
+    <img src={heroImage3} alt="Slide 3" />,
     // <ContactFormSlide />,
   ];
 
