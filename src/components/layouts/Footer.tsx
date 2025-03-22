@@ -43,8 +43,16 @@ function Footer() {
               <span>+234 805 452 8088</span>
             </li>
             <li>
+              <FaPhone className="contact-icon" />
+              <span>+234 802 322 0766</span>
+            </li>
+            <li>
               <FaEnvelope className="contact-icon" />
               <span>zac_y56@yahoo.com</span>
+            </li>
+            <li>
+              <FaEnvelope className="contact-icon" />
+              <span>kemiomoawo@yahoo.co.uk</span>
             </li>
             {/* <li>
               <FaMapMarkerAlt className="contact-icon" />

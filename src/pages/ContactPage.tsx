@@ -148,13 +148,19 @@ function ContactPage() {
                     <div className="contact-method">
                         <h2 className="header-text">Call us</h2>
                         <p>Our lines are open 8:30am – 5pm Monday to Friday for sales and general enquiries.</p>
-                        <p className="contact-highlight">+234 (0)8054 528088</p>
+                        <div className="contact-highlights">
+                            <p className="contact-highlight">+234 (0)8054 528088</p>
+                            <p className="contact-highlight">+234 (0)8023 220766</p>
+                        </div>
                     </div>
                     <div className="contact-method">
                         <h2 className="header-text">Email us</h2>
                         <p>Send us an email at any time with your enquiry, complete the form and a member of our team
                             will come back to you shortly.</p>
-                        <p className="contact-highlight">zac_y56@yahoo.com</p>
+                        <div className="contact-highlights">
+                            <p className="contact-highlight">zac_y56@yahoo.com</p>
+                            <p className="contact-highlight">kemiomoawo@yahoo.co.uk</p>
+                        </div>
                     </div>
                 </div>
             </div>

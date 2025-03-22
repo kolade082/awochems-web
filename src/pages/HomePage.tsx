@@ -169,7 +169,7 @@ function HomePage() {
                 quality control
               </p>
               <ul className="benefit-features">
-                <li>ISO Certified Manufacturing</li>
+                {/* <li>ISO Certified Manufacturing</li> */}
                 <li>Quality Testing at Every Stage</li>
               </ul>
             </div>
