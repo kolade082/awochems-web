@@ -1,6 +1,6 @@
-# Awochems Website
+# Awochem Website
 
-A modern, responsive website for Awochems, showcasing industrial packaging solutions and sector-specific services.
+A modern, responsive website for Awochem, showcasing their products, services, and company information.
 
 ## 🌟 Features
 
@@ -31,10 +31,10 @@ A modern, responsive website for Awochems, showcasing industrial packaging solut
 
 - **Home**: Landing page with hero section and sector overview
 - **Products**:
-  - Specialist Bags
-  - Tray & Dolav Liners
-  - Sheet & Tubing
-  - Specialist Sacks
+  - Packaging & Industrial Bags
+  - Food & Consumer Packaging
+  - Printing & Customisation
+  - Stretch & Shrink Wraps
 - **Sectors**: Industry-specific solutions
 - **About**: Company information and history
 - **Contact**: Contact form and information
@@ -87,3 +87,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Contact
 
 For any inquiries, please reach out through the contact form on the website or create an issue in this repository.
+
+## 🌐 Live Site
+
+Visit [www.awochem.com](https://www.awochem.com) to see the website in action.
