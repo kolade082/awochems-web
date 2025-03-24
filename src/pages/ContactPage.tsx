@@ -158,9 +158,9 @@ function ContactPage() {
                         <p>Send us an email at any time with your enquiry, complete the form and a member of our team
                             will come back to you shortly.</p>
                         <div className="contact-highlights">
-                            <p className="contact-highlight">zac_y56@yahoo.com</p>
-                            <p className="contact-highlight">kemiomoawo@yahoo.co.uk</p>
+                            <p className="contact-highlight">awochempolythene@gmail.com</p>
                         </div>
+                    
                     </div>
                 </div>
             </div>

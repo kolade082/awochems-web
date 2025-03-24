@@ -48,11 +48,7 @@ function Footer() {
             </li>
             <li>
               <FaEnvelope className="contact-icon" />
-              <span>zac_y56@yahoo.com</span>
-            </li>
-            <li>
-              <FaEnvelope className="contact-icon" />
-              <span>kemiomoawo@yahoo.co.uk</span>
+              <span>awochempolythene@gmail.com</span>
             </li>
             {/* <li>
               <FaMapMarkerAlt className="contact-icon" />

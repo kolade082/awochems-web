@@ -55,7 +55,7 @@ const AboutPage: React.FC = () => {
                     <h2 className="header-text">Our History</h2>
                     <div className="history-content">
                         <div className="fade-in">
-                            <p>Awochem Limited was incorporated in 19 — and has been providing packaging materials to
+                            <p>Awochem Limited was incorporated in 2010 and has been providing packaging materials to
                                 the domestic and industrial sector.
                                 The company has seasoned and experienced industrial Chemists and experts who have a deep
                                 knowledge of the Nigerian industrial market.
